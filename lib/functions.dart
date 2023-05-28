@@ -1,19 +1,20 @@
-void add(num1, num2){ // là khi gọi truyền tham số theo vị trí sẽ map theo
+void add(int num1, num2) {
+  // là khi gọi truyền tham số theo vị trí sẽ map theo
   num1 + num2;
 }
 
-void demo(){
+void demo() {
   add(5, 3);
 }
 
-void addNameParameter({num1, required num2}){ 
+void addNameParameter({int? num1, required int num2}) {
   // sử dụng cách này khi tham số truyền vào không cần đúng vị trí
   // các widget thường dùng kiểu này
-  // required là tham số bắt buộc 
+  // required là tham số bắt buộc
 
-  num1 + num2;
+  num1! + num2;
 }
 
-void demoNameParameter(){
-  addNameParameter(num2:3, num1:5);
+void demoNameParameter() {
+  addNameParameter(num2: 3, num1: 5);
 }
